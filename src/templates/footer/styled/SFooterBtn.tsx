@@ -7,4 +7,7 @@ export const SFooterBtn = styled.div`
     border-radius: 8px;
     margin: 10px 25px;
     padding: 10px 45px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 `
