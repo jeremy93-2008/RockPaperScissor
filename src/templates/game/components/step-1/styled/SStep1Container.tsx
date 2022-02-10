@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
-export const SGameShapeContainer = styled.div`
+export const SStep1Container = styled.div`
     position: absolute;
     width: 50vw;
 `
 
-export const SGameShapeInnerContainer = styled.div<{
+export const SStep1InnerContainer = styled.div<{
     justify?: string
 }>`
     display: flex;

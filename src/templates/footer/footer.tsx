@@ -7,10 +7,12 @@ import { Modal } from '../../components/modal/modal'
 import rules from '../../assets/image-rules.svg'
 import rulesBonus from '../../assets/image-rules-bonus.svg'
 import { useAtom } from 'jotai'
-import { gameTypeAtom } from '../../store'
+import { gameTypeAtom, scoreAtom, stepAtom } from '../../store'
 
 export function Footer() {
     const [type, setType] = useAtom(gameTypeAtom)
+    const [step] = useAtom(stepAtom)
+    const [score] = useAtom(scoreAtom)
     const [isModalOpen, setModalOpen] = useState(false)
     const onClickChange = useCallback(() => {
         setType((prevState) => {
@@ -24,7 +26,12 @@ export function Footer() {
     return (
         <>
             <SFooterContainer>
-                <SFooterBtn onClick={onClickChange}>Change</SFooterBtn>
+                <SFooterBtn
+                    disabled={step === 'endgame' || score > 0}
+                    onClick={onClickChange}
+                >
+                    Change
+                </SFooterBtn>
                 <SFooterBtn onClick={onClickRule}>Rules</SFooterBtn>
             </SFooterContainer>
             <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>

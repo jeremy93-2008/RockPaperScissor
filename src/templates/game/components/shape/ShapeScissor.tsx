@@ -1,7 +1,7 @@
-import { Shape } from '../../../components/shape/shape'
+import { Shape } from '../../../../components/shape/shape'
 import * as React from 'react'
-import { IShapeCustomProps } from '../game'
-import scissor from '../../../assets/icon-scissors.svg'
+import { IShapeCustomProps } from '../../game'
+import scissor from '../../../../assets/icon-scissors.svg'
 
 export function ShapeScissor({ className, onClick }: IShapeCustomProps) {
     return (

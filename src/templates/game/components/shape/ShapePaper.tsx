@@ -1,7 +1,7 @@
-import { Shape } from '../../../components/shape/shape'
+import { Shape } from '../../../../components/shape/shape'
 import * as React from 'react'
-import { IShapeCustomProps } from '../game'
-import paper from '../../../assets/icon-paper.svg'
+import { IShapeCustomProps } from '../../game'
+import paper from '../../../../assets/icon-paper.svg'
 
 export function ShapePaper({ className, onClick }: IShapeCustomProps) {
     return (
