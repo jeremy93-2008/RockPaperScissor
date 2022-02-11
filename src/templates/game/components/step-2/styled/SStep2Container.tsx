@@ -12,6 +12,7 @@ export const SStep2InnerContainer = styled.div`
     flex-direction: column;
     align-items: center;
     flex: 1;
+    transition: opacity 0.2s ease-in-out;
     & > p {
         text-transform: uppercase;
         letter-spacing: 2px;
