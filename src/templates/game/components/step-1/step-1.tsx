@@ -31,7 +31,10 @@ export function Step1() {
 
     return (
         <>
-            <SStep1Image src={type === 'bonus' ? pentagon : triangle} />
+            <SStep1Image
+                src={type === 'bonus' ? pentagon : triangle}
+                alt="board"
+            />
             <SStep1Container className={'-mt-[55px]'}>
                 {type === 'normal' ? (
                     <>
