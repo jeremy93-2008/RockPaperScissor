@@ -11,7 +11,7 @@ export function ShapeLizard({ className, onClick }: IShapeCustomProps) {
             onClick={onClick}
             className={className}
         >
-            <img src={lizard} />
+            <img src={lizard} alt="lizard" />
         </Shape>
     )
 }

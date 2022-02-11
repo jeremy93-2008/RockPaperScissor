@@ -12,7 +12,7 @@ export function Modal({ isOpen, onClose, children }: IModalProps) {
     return isOpen ? (
         <SModalContainer>
             <SModalClose className="close-btn" onClick={onClose}>
-                <img className="max-w-[12px]" src={close} />
+                <img className="max-w-[12px]" src={close} alt="Close Modal" />
             </SModalClose>
             <div className="flex flex-col items-center">
                 <h1 className="text-gray-500 uppercase mb-10 text-3xl font-bold">

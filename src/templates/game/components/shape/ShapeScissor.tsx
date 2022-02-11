@@ -11,7 +11,7 @@ export function ShapeScissor({ className, onClick }: IShapeCustomProps) {
             onClick={onClick}
             className={className}
         >
-            <img src={scissor} />
+            <img src={scissor} alt="scissor" />
         </Shape>
     )
 }

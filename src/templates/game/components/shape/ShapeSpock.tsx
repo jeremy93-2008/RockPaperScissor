@@ -11,7 +11,7 @@ export function ShapeSpock({ className, onClick }: IShapeCustomProps) {
             onClick={onClick}
             className={className}
         >
-            <img src={spock} />
+            <img src={spock} alt="spock" />
         </Shape>
     )
 }

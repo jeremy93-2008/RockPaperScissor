@@ -18,7 +18,7 @@ export function Shape({
     return (
         <SShape
             onClick={onClick}
-            color={color}
+            borderColor={color}
             shadowColor={shadowColor}
             className={className}
         >

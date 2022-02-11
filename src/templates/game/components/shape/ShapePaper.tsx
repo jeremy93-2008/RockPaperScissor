@@ -11,7 +11,7 @@ export function ShapePaper({ className, onClick }: IShapeCustomProps) {
             onClick={onClick}
             className={className}
         >
-            <img src={paper} />
+            <img src={paper} alt="paper" />
         </Shape>
     )
 }
