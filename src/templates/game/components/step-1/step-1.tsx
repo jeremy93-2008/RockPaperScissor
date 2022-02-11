@@ -54,11 +54,11 @@ export function Step1() {
                         <SStep1InnerContainer className="bonus">
                             <ShapeScissor onClick={onShapeClick('scissor')} />
                         </SStep1InnerContainer>
-                        <SStep1InnerContainer
-                            className="bonus -mt-4 mb-6"
-                            justify={'space-around'}
-                        >
-                            <ShapeSpock onClick={onShapeClick('spock')} />
+                        <SStep1InnerContainer className="bonus -mt-4 mb-6">
+                            <ShapeSpock
+                                className="mr-[180px]"
+                                onClick={onShapeClick('spock')}
+                            />
                             <ShapePaper onClick={onShapeClick('paper')} />
                         </SStep1InnerContainer>
                         <SStep1InnerContainer className={'bonus mt-10'}>
