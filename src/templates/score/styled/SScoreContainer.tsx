@@ -11,5 +11,10 @@ export const SScoreContainer = styled.div`
     & > section {
         display: flex;
         justify-content: center;
+        align-items: center;
+    }
+    @media (max-width: 640px) {
+        flex: 1;
+        padding: 0 32px;
     }
 `

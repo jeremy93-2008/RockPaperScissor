@@ -1,10 +1,11 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const SShape = styled.div<{
     color: string
     shadowColor: string
-    className: string
+    className?: string
 }>`
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,4 +22,19 @@ export const SShape = styled.div<{
                     : ''};
     cursor: pointer;
     transition: box-shadow 0.2s ease-in-out 0.1s;
+    z-index: 4;
+    @media (max-width: 640px) {
+        ${(props) =>
+            props.className && props.className.includes('winner')
+                ? css`
+                      z-index: 2;
+                  `
+                : css``}
+        box-shadow: inset 2px 6px 1px gray,
+        2px 6px 1px ${(props) => props.shadowColor}
+        ${(props) =>
+            props.className && props.className.includes('winner')
+                ? ', 0 0 0 30px rgba(255,255,255,.05), 0 0 0 60px rgba(255,255,255,.05), 0 0 0 90px rgba(255,255,255,.05)'
+                : ''};
+    }
 `

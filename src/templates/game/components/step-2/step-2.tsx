@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { SStep2Container, SStep2InnerContainer } from './styled/SStep2Container'
 import { useAtom } from 'jotai'
 import {
+    AppStorageKey,
     IShape,
     scoreAtom,
     shapeSelectedAtom,
@@ -15,7 +16,7 @@ import { SPlayAgainBtn } from './styled/SPlayAgainBtn'
 
 export function Step2() {
     const [_step, setStep] = useAtom(stepAtom)
-    const [_score, setScore] = useAtom(scoreAtom)
+    const [score, setScore] = useAtom(scoreAtom)
     const [selectedShape] = useAtom(shapeSelectedAtom)
     const [turnEnd, setTurnEnd] = useState<{
         winner?: 'you' | 'computer' | 'none'
@@ -46,6 +47,11 @@ export function Step2() {
         }, 100)
     }, [computerShape])
 
+    useEffect(() => {
+        if (!score) return
+        localStorage.setItem(AppStorageKey, score.toString())
+    }, [score])
+
     return (
         <SStep2Container>
             <SStep2InnerContainer>
@@ -59,13 +65,15 @@ export function Step2() {
                 </div>
             </SStep2InnerContainer>
             <SStep2InnerContainer
-                className={turnEnd.winner ? 'opacity-100' : 'opacity-0'}
+                className={`turn-message ${
+                    turnEnd.winner ? 'opacity-100' : 'opacity-0'
+                }`}
             >
-                <p>
+                <div className="text-3xl mb-5">
                     {turnEnd.winner === 'you' && 'You Win'}
                     {turnEnd.winner === 'computer' && 'You Lose'}
                     {turnEnd.winner === 'none' && 'You Draw'}
-                </p>
+                </div>
                 <SPlayAgainBtn onClick={onClickPlayAgain}>
                     Play Again
                 </SPlayAgainBtn>

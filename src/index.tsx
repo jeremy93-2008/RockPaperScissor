@@ -1,7 +1,7 @@
 import * as ReactDOM from 'react-dom'
 import * as React from 'react'
-import {App} from './app'
-import {createGlobalStyle} from 'styled-components'
+import { App } from './app'
+import { createGlobalStyle } from 'styled-components'
 import './index.css'
 
 const GlobalStyles = createGlobalStyle`
@@ -10,6 +10,8 @@ const GlobalStyles = createGlobalStyle`
       padding: 0;
       font-family: 'Barlow Semi Condensed', sans-serif;
       user-select: none;
+      width: 100vw;
+      height: 100vh;
     }
 `
 

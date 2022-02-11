@@ -15,6 +15,7 @@ import * as React from 'react'
 import { useCallback } from 'react'
 import { ShapeSpock } from '../shape/ShapeSpock'
 import { ShapeLizard } from '../shape/ShapeLizard'
+import { SStep1Image } from './styled/SStep1Image'
 
 export function Step1() {
     const [_shape, setShape] = useAtom(shapeSelectedAtom)
@@ -30,7 +31,7 @@ export function Step1() {
 
     return (
         <>
-            <img src={type === 'bonus' ? pentagon : triangle} />
+            <SStep1Image src={type === 'bonus' ? pentagon : triangle} />
             <SStep1Container className={'-mt-[55px]'}>
                 {type === 'normal' ? (
                     <>
@@ -47,19 +48,19 @@ export function Step1() {
                     </>
                 ) : (
                     <>
-                        <SStep1InnerContainer>
+                        <SStep1InnerContainer className="bonus">
                             <ShapeScissor onClick={onShapeClick('scissor')} />
                         </SStep1InnerContainer>
                         <SStep1InnerContainer
-                            className="-mt-4 mb-6"
+                            className="bonus -mt-4 mb-6"
                             justify={'space-around'}
                         >
                             <ShapeSpock onClick={onShapeClick('spock')} />
                             <ShapePaper onClick={onShapeClick('paper')} />
                         </SStep1InnerContainer>
-                        <SStep1InnerContainer className={'mt-10'}>
+                        <SStep1InnerContainer className={'bonus mt-10'}>
                             <ShapeLizard
-                                className="mr-[60px]"
+                                className="mr-[60px] bonus-shape"
                                 onClick={onShapeClick('lizard')}
                             />
                             <ShapeRock onClick={onShapeClick('rock')} />

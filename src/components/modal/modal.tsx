@@ -11,10 +11,15 @@ interface IModalProps extends JSX.ElementChildrenAttribute {
 export function Modal({ isOpen, onClose, children }: IModalProps) {
     return isOpen ? (
         <SModalContainer>
-            <SModalClose onClick={onClose}>
+            <SModalClose className="close-btn" onClick={onClose}>
                 <img className="max-w-[12px]" src={close} />
             </SModalClose>
-            {children}
+            <div className="flex flex-col items-center">
+                <h1 className="text-gray-500 uppercase mb-10 text-3xl font-bold">
+                    Rules
+                </h1>
+                {children}
+            </div>
         </SModalContainer>
     ) : null
 }

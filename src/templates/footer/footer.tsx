@@ -27,7 +27,7 @@ export function Footer() {
         <>
             <SFooterContainer>
                 <SFooterBtn
-                    disabled={step === 'endgame' || score > 0}
+                    disabled={step === 'endgame' || score !== 0}
                     onClick={onClickChange}
                 >
                     Change
