@@ -30,8 +30,8 @@ Users should be able to:
 ![Mobile](./screenshot-m.png)
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/jeremy93-2008/RockPaperScissor](https://github.com/jeremy93-2008/RockPaperScissor)
+- Live Site URL: [https://jeremy93-2008.github.io/RockPaperScissor/](https://jeremy93-2008.github.io/RockPaperScissor/)
 
 ## My process
 
